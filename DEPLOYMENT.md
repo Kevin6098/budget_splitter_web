@@ -65,7 +65,7 @@ In the `psql` prompt:
 
 ```sql
 CREATE DATABASE budget_splitter;
-CREATE USER budget_user WITH PASSWORD 'your_secure_password_here';
+CREATE USER budget_user WITH PASSWORD '5792_Ang';
 ALTER DATABASE budget_splitter OWNER TO budget_user;
 \c budget_splitter
 GRANT ALL ON SCHEMA public TO budget_user;
@@ -94,9 +94,8 @@ Use the same password you set above. Adjust if your schema expects postgres.
 ### Option A: Clone from Git (recommended)
 
 ```bash
-sudo mkdir -p /var/www
-sudo chown $USER:$USER /var/www
-cd /var/www
+mkdir -p /root/projects
+cd /root/projects
 git clone https://github.com/your-username/budget_splitter_web.git
 cd budget_splitter_web
 ```
@@ -108,19 +107,19 @@ If the repo is private, use SSH or a deploy key.
 From your **local** machine (in the project directory):
 
 ```bash
-scp -r . your-user@your-vps-ip:/var/www/budget_splitter_web
+scp -r . your-user@your-vps-ip:/root/projects/budget_splitter_web
 ```
 
 Then on the VPS:
 
 ```bash
-cd /var/www/budget_splitter_web
+cd /root/projects/budget_splitter_web
 ```
 
 ### Install dependencies and set environment
 
 ```bash
-cd /var/www/budget_splitter_web
+cd /root/projects/budget_splitter_web
 npm install --production
 cp .env.example .env
 nano .env
@@ -149,7 +148,7 @@ Generate a strong `JWT_SECRET` (e.g. `openssl rand -base64 32`). Save and exit.
 ## 4. Run the app with PM2
 
 ```bash
-cd /var/www/budget_splitter_web
+cd /root/projects/budget_splitter_web
 pm2 start ecosystem.config.js --env vps
 pm2 save
 pm2 startup
@@ -235,7 +234,7 @@ CORS is already set to allow `https://splitx.suntzutechnologies.com` in `server.
 ## Updating the app later
 
 ```bash
-cd /var/www/budget_splitter_web
+cd /root/projects/budget_splitter_web
 git pull
 npm install --production
 pm2 restart budget-splitter-api
@@ -255,7 +254,7 @@ pm2 restart budget-splitter-api
 |-------|------------|
 | 502 Bad Gateway | App not running or wrong port. Run `pm2 status` and `curl http://localhost:3012/health`. |
 | Database connection errors | Check DB_* in `.env`, PostgreSQL is running: `sudo systemctl status postgresql`. |
-| Permission denied on files | Ensure the user running PM2 owns `/var/www/budget_splitter_web` (e.g. `sudo chown -R $USER:$USER /var/www/budget_splitter_web`). |
+| Permission denied on files | Ensure the user running PM2 owns `/root/projects/budget_splitter_web` (e.g. `chown -R root:root /root/projects/budget_splitter_web`). |
 | Nginx 404 | Confirm `proxy_pass http://127.0.0.1:3012;` and that the app listens on 3012. |
 | HTTPS mixed content | Use HTTPS everywhere; the guide uses Certbot so the site is served over HTTPS. |
 
@@ -266,7 +265,7 @@ pm2 restart budget-splitter-api
 1. Point **splitx.suntzutechnologies.com** to your VPS IP.
 2. Install Node 20, PM2, PostgreSQL, Nginx, Certbot.
 3. Create PostgreSQL database and user, load `database/schema.sql`.
-4. Clone or upload the app to `/var/www/budget_splitter_web`, set `.env` with `MODE=vps` and DB/JWT values.
+4. Clone or upload the app to `/root/projects/budget_splitter_web`, set `.env` with `MODE=vps` and DB/JWT values.
 5. Start with `pm2 start ecosystem.config.js --env vps` and enable `pm2 startup`.
 6. Configure Nginx for `splitx.suntzutechnologies.com` → `http://127.0.0.1:3012`.
 7. Run `certbot --nginx -d splitx.suntzutechnologies.com` for HTTPS.
