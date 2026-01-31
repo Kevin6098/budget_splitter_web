@@ -15,9 +15,18 @@
     <div class="header-inner">
       <a href="/" class="logo">Budget Splitter</a>
       <nav class="nav">
-        <a href="#features">Features</a>
-        <a href="#how-it-works">How it works</a>
-        <a href="#cta" class="btn btn-small">Get the app</a>
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#how-it-works" data-i18n="nav.howItWorks">How it works</a>
+        <div class="lang-dropdown" id="lang-dropdown">
+          <button type="button" class="lang-trigger" id="lang-current" aria-expanded="false" aria-haspopup="listbox" aria-label="Select language">EN</button>
+          <ul class="lang-list" id="lang-list" role="listbox" aria-label="Language">
+            <li role="option" data-lang="en" aria-current="true">English</li>
+            <li role="option" data-lang="zh">中文</li>
+            <li role="option" data-lang="ms">Bahasa Melayu</li>
+            <li role="option" data-lang="ja">日本語</li>
+          </ul>
+        </div>
+        <a href="#cta" class="btn btn-small" data-i18n="nav.getApp">Get the app</a>
       </nav>
     </div>
   </header>
@@ -25,24 +34,27 @@
   <main>
     <section class="hero">
       <div class="hero-inner">
-        <h1 class="hero-title">Split expenses fairly.<br>No awkward conversations.</h1>
-        <p class="hero-lead">Trips, roommates, or shared costs—track who paid what, see who owes whom, and settle up in one place.</p>
+        <h1 class="hero-title">
+          <span data-i18n="hero.title">Split expenses fairly.</span><br>
+          <span data-i18n="hero.titleLine2">No awkward conversations.</span>
+        </h1>
+        <p class="hero-lead" data-i18n="hero.lead">Trips, roommates, or shared costs—track who paid what, see who owes whom, and settle up in one place.</p>
         <div class="hero-cta">
-          <a href="#cta" class="btn btn-primary">Get Budget Splitter</a>
-          <a href="#features" class="btn btn-ghost">See how it works</a>
+          <a href="#cta" class="btn btn-primary" data-i18n="hero.ctaPrimary">Get Budget Splitter</a>
+          <a href="#features" class="btn btn-ghost" data-i18n="hero.ctaSecondary">See how it works</a>
         </div>
       </div>
       <div class="hero-visual" aria-hidden="true">
         <div class="mock-card mock-card-1">
-          <span class="mock-label">Trip: Tokyo</span>
+          <span class="mock-label" data-i18n="mock.trip">Trip: Tokyo</span>
           <span class="mock-value">¥ 124,500</span>
         </div>
         <div class="mock-card mock-card-2">
-          <span class="mock-label">You owe Alex</span>
+          <span class="mock-label" data-i18n="mock.youOwe">You owe Alex</span>
           <span class="mock-value">¥ 8,200</span>
         </div>
         <div class="mock-card mock-card-3">
-          <span class="mock-label">Settled</span>
+          <span class="mock-label" data-i18n="mock.settled">Settled</span>
           <span class="mock-value">✓</span>
         </div>
       </div>
@@ -50,27 +62,27 @@
 
     <section id="features" class="features">
       <div class="section-inner">
-        <h2 class="section-title">Everything you need to split fairly</h2>
+        <h2 class="section-title" data-i18n="features.title">Everything you need to split fairly</h2>
         <div class="feature-grid">
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">👥</div>
-            <h3>Groups & members</h3>
-            <p>Create a group for your trip or household, add members, and invite with a code. Everyone stays in sync.</p>
+            <h3 data-i18n="features.groupsTitle">Groups & members</h3>
+            <p data-i18n="features.groupsDesc">Create a group for your trip or household, add members, and invite with a code. Everyone stays in sync.</p>
           </article>
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">📝</div>
-            <h3>Track expenses</h3>
-            <p>Log meals, transport, tickets, shopping, and more. Record who paid and split amounts per person.</p>
+            <h3 data-i18n="features.trackTitle">Track expenses</h3>
+            <p data-i18n="features.trackDesc">Log meals, transport, tickets, shopping, and more. Record who paid and split amounts per person.</p>
           </article>
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">⚖️</div>
-            <h3>Who owes whom</h3>
-            <p>See a clear summary of who’s paid and who still owes. Mark as paid when you settle up.</p>
+            <h3 data-i18n="features.owesTitle">Who owes whom</h3>
+            <p data-i18n="features.owesDesc">See a clear summary of who's paid and who still owes. Mark as paid when you settle up.</p>
           </article>
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">💱</div>
-            <h3>Multi-currency</h3>
-            <p>Supports JPY, MYR, SGD, and USD so you can split in the currency that fits your trip.</p>
+            <h3 data-i18n="features.currencyTitle">Multi-currency</h3>
+            <p data-i18n="features.currencyDesc">Supports JPY, MYR, SGD, and USD so you can split in the currency that fits your trip.</p>
           </article>
         </div>
       </div>
@@ -78,27 +90,27 @@
 
     <section id="how-it-works" class="how">
       <div class="section-inner">
-        <h2 class="section-title">How it works</h2>
+        <h2 class="section-title" data-i18n="how.title">How it works</h2>
         <ol class="steps">
           <li class="step">
             <span class="step-num">1</span>
             <div>
-              <h3>Create a group</h3>
-              <p>Name your trip or household and add members. Share an invite code so others can join.</p>
+              <h3 data-i18n="how.step1Title">Create a group</h3>
+              <p data-i18n="how.step1Desc">Name your trip or household and add members. Share an invite code so others can join.</p>
             </div>
           </li>
           <li class="step">
             <span class="step-num">2</span>
             <div>
-              <h3>Log expenses</h3>
-              <p>Whenever someone pays—dinner, train tickets, groceries—add the expense and who paid. Split per person or evenly.</p>
+              <h3 data-i18n="how.step2Title">Log expenses</h3>
+              <p data-i18n="how.step2Desc">Whenever someone pays—dinner, train tickets, groceries—add the expense and who paid. Split per person or evenly.</p>
             </div>
           </li>
           <li class="step">
             <span class="step-num">3</span>
             <div>
-              <h3>Settle up</h3>
-              <p>Check the summary to see who owes whom. Mark as paid when you’ve settled. No spreadsheets, no guesswork.</p>
+              <h3 data-i18n="how.step3Title">Settle up</h3>
+              <p data-i18n="how.step3Desc">Check the summary to see who owes whom. Mark as paid when you've settled. No spreadsheets, no guesswork.</p>
             </div>
           </li>
         </ol>
@@ -107,11 +119,11 @@
 
     <section id="cta" class="cta">
       <div class="section-inner cta-inner">
-        <h2 class="cta-title">Ready to split fairly?</h2>
-        <p class="cta-lead">Get Budget Splitter and keep shared expenses simple.</p>
+        <h2 class="cta-title" data-i18n="cta.title">Ready to split fairly?</h2>
+        <p class="cta-lead" data-i18n="cta.lead">Get Budget Splitter and keep shared expenses simple.</p>
         <div class="cta-buttons">
-          <a href="#" class="btn btn-primary btn-large" id="app-store-link">Download on the App Store</a>
-          <p class="cta-note">iOS app — more platforms coming soon.</p>
+          <a href="#" class="btn btn-primary btn-large" id="app-store-link" data-i18n="cta.button">Download on the App Store</a>
+          <p class="cta-note" data-i18n="cta.note">iOS app — more platforms coming soon.</p>
         </div>
       </div>
     </section>
@@ -120,13 +132,14 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <p class="footer-brand">Budget Splitter</p>
-      <p class="footer-copy">Split trip and household expenses fairly. No awkward conversations.</p>
-      <p class="footer-legal">© <span id="year"></span> Budget Splitter. All rights reserved.</p>
+      <p class="footer-copy" data-i18n="footer.copy">Split trip and household expenses fairly. No awkward conversations.</p>
+      <p class="footer-legal">© <span id="year"></span> Budget Splitter. <span data-i18n="footer.legal">All rights reserved.</span></p>
     </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script src="/js/i18n.js"></script>
 </body>
 </html>

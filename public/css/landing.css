@@ -86,6 +86,78 @@ body {
   color: var(--accent);
 }
 
+/* Language switcher */
+.lang-dropdown {
+  position: relative;
+}
+
+.lang-trigger {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  padding: 0.35rem 0.5rem;
+  cursor: pointer;
+  border-radius: 6px;
+  min-width: 2.5rem;
+  transition: color 0.2s, background 0.2s;
+}
+
+.lang-trigger:hover {
+  color: var(--accent);
+  background: var(--accent-light);
+}
+
+.lang-trigger[aria-expanded="true"] {
+  color: var(--accent);
+  background: var(--accent-light);
+}
+
+.lang-list {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin: 0.35rem 0 0;
+  padding: 0.35rem 0;
+  list-style: none;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  min-width: 10rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+  z-index: 200;
+}
+
+.lang-list.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-list li {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.lang-list li:hover {
+  background: var(--accent-light);
+}
+
+.lang-list li[aria-current="true"] {
+  font-weight: 600;
+  color: var(--accent);
+}
+
 /* Buttons */
 .btn {
   display: inline-block;
