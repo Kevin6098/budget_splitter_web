@@ -430,7 +430,7 @@ Login.
 | Local | `GET /api/summary` | No |
 | VPS | `POST /auth/register`, `POST /auth/login` | No |
 | VPS | `GET /auth/me`, `POST /auth/logout` | Bearer |
-| VPS | `GET /api/groups`, `GET /api/groups/:id/members`, `GET /api/groups/:id/expenses` | Bearer |
+| VPS | `GET /api/groups`, `POST /api/groups`, `POST /api/groups/:id/members`, `GET /api/groups/:id/members`, `GET /api/groups/:id/expenses` | Bearer |
 | VPS | `POST/DELETE /api/expenses`, `PATCH /api/expense-splits/:id/payment`, `GET /api/expense-splits/:id/history` | Bearer |
 
 ---
