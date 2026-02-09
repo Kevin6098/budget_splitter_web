@@ -528,7 +528,21 @@ body {
 .footer-copy {
   font-size: 0.9rem;
   color: var(--text-muted);
+  margin: 0 0 0.5rem;
+}
+
+.footer-links {
   margin: 0 0 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-links a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
 }
 
 .footer-legal {
