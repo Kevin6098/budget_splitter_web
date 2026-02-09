@@ -13,7 +13,7 @@ const translations = {
       title: 'Split expenses fairly.',
       titleLine2: 'No awkward conversations.',
       lead: 'Trips, roommates, or shared costs—track who paid what, see who owes whom, and settle up in one place.',
-      ctaPrimary: 'Get Budget Splitter',
+      ctaPrimary: 'Get Xsplitter',
       ctaSecondary: 'See how it works',
     },
     mock: {
@@ -43,7 +43,7 @@ const translations = {
     },
     cta: {
       title: 'Ready to split fairly?',
-      lead: 'Get Budget Splitter and keep shared expenses simple.',
+      lead: 'Get Xsplitter and keep shared expenses simple.',
       button: 'Download on the App Store',
       note: 'iOS app — more platforms coming soon.',
     },
@@ -62,7 +62,7 @@ const translations = {
       title: '公平分摊开销。',
       titleLine2: '不再尴尬开口。',
       lead: '旅行、合租或共同消费——记录谁付了啥、谁欠谁多少，一处结清。',
-      ctaPrimary: '获取 Budget Splitter',
+      ctaPrimary: '获取 Xsplitter',
       ctaSecondary: '查看使用方式',
     },
     mock: {
@@ -92,7 +92,7 @@ const translations = {
     },
     cta: {
       title: '准备公平分摊？',
-      lead: '使用 Budget Splitter，让共同开销变简单。',
+      lead: '使用 Xsplitter，让共同开销变简单。',
       button: '在 App Store 下载',
       note: 'iOS 应用 — 更多平台即将推出。',
     },
@@ -111,7 +111,7 @@ const translations = {
       title: 'Bahagikan perbelanjaan dengan adil.',
       titleLine2: 'Tiada lagi perbualan janggal.',
       lead: 'Trip, serumah, atau kos berkongsi—jejaki siapa bayar apa, lihat siapa berhutang dengan siapa, dan selesaikan di satu tempat.',
-      ctaPrimary: 'Dapatkan Budget Splitter',
+      ctaPrimary: 'Dapatkan Xsplitter',
       ctaSecondary: 'Lihat cara guna',
     },
     mock: {
@@ -141,7 +141,7 @@ const translations = {
     },
     cta: {
       title: 'Sedia untuk bahagi dengan adil?',
-      lead: 'Dapatkan Budget Splitter dan kekalkan perbelanjaan berkongsi mudah.',
+      lead: 'Dapatkan Xsplitter dan kekalkan perbelanjaan berkongsi mudah.',
       button: 'Muat turun di App Store',
       note: 'Aplikasi iOS — lebih banyak platform tidak lama lagi.',
     },
@@ -160,7 +160,7 @@ const translations = {
       title: '支出を公平に割り勘。',
       titleLine2: '言いづらいお金の話もスムーズに。',
       lead: '旅行、ルームシェア、共同出費——誰が何を払ったか、誰が誰にいくら返すか、一箇所で管理して精算できます。',
-      ctaPrimary: 'Budget Splitter を入手',
+      ctaPrimary: 'Xsplitter を入手',
       ctaSecondary: '使い方を見る',
     },
     mock: {
@@ -190,7 +190,7 @@ const translations = {
     },
     cta: {
       title: '公平に割り勘しませんか？',
-      lead: 'Budget Splitter で共同支出をシンプルに。',
+      lead: 'Xsplitter で共同支出をシンプルに。',
       button: 'App Store でダウンロード',
       note: 'iOS アプリ — 他のプラットフォームも近日公開。',
     },
@@ -273,7 +273,7 @@ function langLabel(code) {
 function updateMeta(lang, t) {
   const title = document.querySelector('title');
   const desc = document.querySelector('meta[name="description"]');
-  const titleText = t.hero ? `${t.hero.title} ${t.hero.titleLine2}` : 'Budget Splitter';
+  const titleText = t.hero ? `${t.hero.title} ${t.hero.titleLine2}` : 'Xsplitter';
   const descText = t.hero ? t.hero.lead : '';
   if (title) title.textContent = titleText;
   if (desc && descText) desc.setAttribute('content', descText);
